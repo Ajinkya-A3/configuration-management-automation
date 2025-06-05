@@ -1,0 +1,21 @@
+---
+- name: Install NGINX on worker nodes
+  hosts: workers
+  become: yes
+  tasks:
+
+    - name: Update APT package index
+      apt:
+        update_cache: yes
+
+    - name: Install NGINX
+      apt:
+        name: nginx
+        state: present
+
+    - name: Ensure NGINX is running
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+

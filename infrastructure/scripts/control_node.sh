@@ -7,7 +7,11 @@ unzip awscliv2.zip
 sudo ./aws/install
 
 sudo useradd -m ansible
-sudo smkdir -p /home/ansible/.ssh
+
+# Set password for ansible user
+echo "ansible:Ansible" | sudo chpasswd
+
+sudo mkdir -p /home/ansible/.ssh
 
 sudo cat <<EOF > /home/ansible/.ssh/id_rsa
 ${private_key}
