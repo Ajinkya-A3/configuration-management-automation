@@ -1,0 +1,51 @@
+# -------------------------------------
+# Terraform base files to ignore
+# -------------------------------------
+
+# Terraform state
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Terraform plan output
+*.tfplan
+
+# Sensitive variable files
+*.tfvars
+*.tfvars.json
+
+# Terraform override files (often used locally)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Local environment settings
+.terraformrc
+.terraform.lock.hcl
+
+# IDE and OS files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.bak
+
+# SSH keys and sensitive files
+key-pair/
+*.pem
+*.key
+*.crt
+*.pub
+
+# Shell history and logs
+*.log
+*.history
+
+# User data templates if they contain secrets (optional)
+scripts/*.sh
+scripts/*.sh.tftpl
