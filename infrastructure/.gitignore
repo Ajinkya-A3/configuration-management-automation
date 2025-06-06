@@ -46,3 +46,6 @@ key-pair/
 # User data templates if they contain secrets (optional)
 scripts/*.sh
 scripts/*.sh.tftpl
+
+
+.vscode/
